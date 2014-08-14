@@ -206,7 +206,7 @@ void guiQuad::draw(float x, float y, float width, float height, int red, int gre
     
     ofNoFill();
     
-    ofSetColor(0, 255, 0);
+    ofSetColor(red, green, blue);
     glLineWidth(1);
     glBegin(GL_LINE_LOOP);
     for(int i = 0; i < 4; i++){
@@ -218,7 +218,6 @@ void guiQuad::draw(float x, float y, float width, float height, int red, int gre
     ofSetRectMode(OF_RECTMODE_CENTER);
     for(int i = 0; i < 4; i++)
     {
-        ofDrawBitmapStringHighlight(ofToString(i), srcScaled[i]);
         ofRect(srcScaled[i].x, srcScaled[i].y, 10, 10);
     }
     ofSetRectMode(OF_RECTMODE_CORNER);
